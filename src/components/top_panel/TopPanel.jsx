@@ -6,11 +6,9 @@ export function TopPanel() {
     useContext(GlobalContext);
 
   return (
-    <div>
-      TOP PANEL
+    <div className="panel topPanel">
+      <button onClick={remoweRow}>-</button> <p>{row}</p>
       <button onClick={addRow}>+</button>
-      <p>{row}</p>
-      <button onClick={remoweRow}>-</button>
     </div>
   );
 }

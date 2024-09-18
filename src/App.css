@@ -1,0 +1,103 @@
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+main {
+  min-height: 100vh;
+  padding: 5px;
+  position: relative;
+}
+
+.header {
+  background-color: rgba(158, 187, 53, 0.85);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerBoard {
+  text-align: center;
+  color: rgba(116, 13, 13, 0.85);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+button {
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.panel {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(70, 180, 180, 0.75);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 50px;
+}
+
+.topPanel {
+  margin-left: 65px;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 4rem;
+  position: fixed;
+  top: 80px;
+  left: 20px;
+}
+
+.sidePanel {
+  height: 250px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  border: 1px solid #ddd;
+  position: fixed;
+  top: 150px;
+  left: 10px;
+}
+.block {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(105, 180, 70, 0.568);
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
+}
+.block1 {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgb(45, 105, 17);
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
+}
+.container {
+  padding: 5rem;
+  display: flex;
+  gap: 0.3rem;
+}

@@ -1,9 +1,28 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
-
+import { SidePanel } from "../side_panel/SidePanel";
+import { TopPanel } from "../top_panel/TopPanel";
 export function Main() {
   const { column, row, addRow, addColumn, remoweColumn, remoweRow } =
     useContext(GlobalContext);
+  const rowArray = Array(row).fill();
+  const columnArray = Array(column).fill();
+  console.log(rowArray);
+  console.log(columnArray);
 
-  return <main>labadein</main>;
+  return (
+    <main>
+      <TopPanel></TopPanel>
+      <SidePanel></SidePanel>
+      <div className="container">
+        {rowArray.map((row, rowIndex) => (
+          <div key={rowIndex} className="block">
+            {columnArray.map((row, colIndex) => (
+              <div key={colIndex} className="block1"></div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </main>
+  );
 }

@@ -5,5 +5,11 @@ export function SidePanel() {
   const { column, row, addRow, addColumn, remoweColumn, remoweRow } =
     useContext(GlobalContext);
 
-  return <div>SIDE PANEL</div>;
+  return (
+    <div className="panel sidePanel">
+      <button onClick={remoweColumn}>-</button>
+      <p>{column}</p>
+      <button onClick={addColumn}>+</button>
+    </div>
+  );
 }

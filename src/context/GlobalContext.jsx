@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 export const initialContext = {
-  row: 12,
-  column: 12,
+  row: 1,
+  column: 1,
   addRow: () => {},
   addColumn: () => {},
   remoweRow: () => {},
@@ -28,16 +28,19 @@ export function ContextWrapper(props) {
   const [column, setColumn] = useState(initialContext.column);
 
   function addRow() {
-    setRow(row + 1);
+    console.log(Array(row).fill());
+    row < 1 ? row : setRow(row + 1);
   }
   function addColumn() {
     setColumn(column + 1);
   }
   function remoweRow() {
-    setRow(row - 1);
+    console.log(Array(row).fill());
+
+    row <= 1 ? row : setRow(row - 1);
   }
   function remoweColumn() {
-    setColumn(column - 1);
+    column <= 1 ? column : setColumn(column - 1);
   }
 
   // localStorage.setItem(
