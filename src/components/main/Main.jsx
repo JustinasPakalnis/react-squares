@@ -17,16 +17,10 @@ export function Main() {
       <TopPanel></TopPanel>
       <SidePanel></SidePanel>
       <div className="container">
-        {rowArray.map((div, index) => (
-          <div key={index} className={blockClass}>
+        {rowArray.map((div, rindex) => (
+          <div key={rindex} className={blockClass}>
             {columnArray.map((div, index) => (
-              <div
-                onClick={() =>
-                  setBlockClass(blockClass === "block" ? "block1" : "block")
-                }
-                key={index}
-                className={blockClass}
-              ></div>
+              <div key={index} className={blockClass}></div>
             ))}
           </div>
         ))}
