@@ -99,6 +99,11 @@ button:hover {
   top: 150px;
   left: 10px;
 }
+.container {
+  padding: 5rem;
+  display: flex;
+  gap: 0.3rem;
+}
 .block {
   height: 3rem;
   width: 3rem;
@@ -109,12 +114,7 @@ button:hover {
 .block1 {
   height: 3rem;
   width: 3rem;
-  background-color: rgb(45, 105, 17);
+  background-color: rgb(111, 182, 86);
   border-radius: 5px;
   margin-bottom: 0.3rem;
-}
-.container {
-  padding: 5rem;
-  display: flex;
-  gap: 0.3rem;
 }
