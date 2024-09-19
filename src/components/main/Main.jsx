@@ -6,8 +6,8 @@ import { useState } from "react";
 export function Main() {
   const { column, row, addRow, addColumn, remoweColumn, remoweRow } =
     useContext(GlobalContext);
-  const rowArray = Array(row).fill();
-  const columnArray = Array(column).fill();
+  const rowArray = Array(row).fill("x");
+  const columnArray = Array(column).fill("x");
   console.log(rowArray);
   console.log(columnArray);
   const [blockClass, setBlockClass] = useState("block");
@@ -20,7 +20,13 @@ export function Main() {
         {rowArray.map((row, rowIndex) => (
           <div key={rowIndex}>
             {columnArray.map((row, colIndex) => (
-              <div key={colIndex} className="block"></div>
+              <div
+                onClick={() =>
+                  className === "block" ? "blockChecked" : "block"
+                }
+                key={colIndex}
+                className="block"
+              ></div>
             ))}
           </div>
         ))}
