@@ -18,9 +18,9 @@ export function Main() {
       <SidePanel></SidePanel>
       <div className="container">
         {rowArray.map((row, rowIndex) => (
-          <div key={rowIndex} className="block">
+          <div key={rowIndex}>
             {columnArray.map((row, colIndex) => (
-              <div key={colIndex} className="block1"></div>
+              <div key={colIndex} className="block"></div>
             ))}
           </div>
         ))}
