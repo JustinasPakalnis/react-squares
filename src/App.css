@@ -1,3 +1,4 @@
+/* General Reset and Styling */
 body,
 body * {
   margin: 0;
@@ -12,30 +13,33 @@ body {
   line-height: 1.6;
 }
 
+/* Main Container Styling */
 main {
   min-height: 100vh;
   padding: 5px;
   position: relative;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  background: linear-gradient(135deg, #f7f7f7, #e2e2e2);
 }
 
+/* Header Styling */
 .header {
-  background: linear-gradient(
-    135deg,
-    rgba(158, 187, 53, 0.85),
-    rgba(116, 13, 13, 0.85)
-  );
+  background: linear-gradient(135deg, #a4c639, #a11b1b);
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .header:hover {
   transform: translateY(-5px);
+  background: linear-gradient(135deg, #b9d656, #c13e3e);
 }
 
 .headerBoard {
@@ -45,13 +49,15 @@ main {
   font-weight: bold;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: 2px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .headerBoard:hover {
   color: #ffffcc;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* Button Styling */
 button {
   height: 3rem;
   width: 3rem;
@@ -61,23 +67,28 @@ button {
   color: white;
   cursor: pointer;
   font-size: 1.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #3d8c42;
+  transform: translateY(-3px);
 }
 
+/* Panel Styling */
 .panel {
   display: flex;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: rgba(70, 180, 180, 0.75);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   gap: 50px;
+  backdrop-filter: blur(5px);
 }
 
+/* Top Panel Styling */
 .topPanel {
+  z-index: 1;
   margin-left: 65px;
   align-items: center;
   justify-content: center;
@@ -86,18 +97,31 @@ button:hover {
   position: absolute;
   top: 10px;
   left: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #80d0c7, #13547a);
 }
 
+/* Side Panel Styling */
 .sidePanel {
+  z-index: 1;
   height: 250px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 4rem;
   position: absolute;
-  top: 80px;
+  top: 85px;
   left: 10px;
+  display: flex;
+  gap: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #f8ffae, #43c6ac);
 }
+
 p {
   font-weight: bold;
   font-size: 1.5rem;
@@ -105,33 +129,61 @@ p {
   height: 50px;
   text-align: center;
   line-height: 2;
+  transition: color 0.3s ease;
 }
+
+p:hover {
+  color: #357219;
+}
+
+/* Container Styling */
 .container {
+  width: 100%;
   padding: 5rem;
   display: flex;
   gap: 0.3rem;
-}
-.block {
-  height: 3rem;
-  width: 3rem;
-  background-color: #69b44691;
-  border-radius: 5px;
-  transition: 0.3s ease-in-out;
-}
-.block:hover {
-  background-color: rgba(57, 112, 31, 0.568);
-  padding: 0.5rem;
-}
-.blockChecked {
-  height: 3rem;
-  width: 3rem;
-  background-color: #35721991;
-  border-radius: 5px;
-  border: 3px solid #5a7c4a91;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .container > div {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+}
+
+/* Block Styling */
+.block {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(105, 180, 70, 0.6);
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.block:hover {
+  background-color: rgba(57, 112, 31, 0.8);
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Checked Block Styling */
+.blockChecked {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(53, 114, 25, 0.6);
+  border-radius: 8px;
+  border: 3px solid rgba(90, 124, 74, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
 }
