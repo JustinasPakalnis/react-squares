@@ -17,10 +17,10 @@ export function Main() {
       <TopPanel></TopPanel>
       <SidePanel></SidePanel>
       <div className="container">
-        {rowArray.map((div, rindex) => (
-          <div key={rindex} className={blockClass}>
-            {columnArray.map((div, index) => (
-              <div key={index} className={blockClass}></div>
+        {rowArray.map((row, rowIndex) => (
+          <div key={rowIndex} className="block">
+            {columnArray.map((row, colIndex) => (
+              <div key={colIndex} className="block1"></div>
             ))}
           </div>
         ))}
