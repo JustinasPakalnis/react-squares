@@ -1,4 +1,3 @@
-/* General Reset and Styling */
 body,
 body * {
   margin: 0;
@@ -13,18 +12,15 @@ body {
   line-height: 1.6;
 }
 
-/* Main Container Styling */
 main {
   min-height: 100vh;
   padding: 5px;
   position: relative;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
+
   background: linear-gradient(135deg, #f7f7f7, #e2e2e2);
 }
 
-/* Header Styling */
 .header {
   background: linear-gradient(135deg, #a4c639, #a11b1b);
   height: 60px;
@@ -57,7 +53,6 @@ main {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Button Styling */
 button {
   height: 3rem;
   width: 3rem;
@@ -75,7 +70,6 @@ button:hover {
   transform: translateY(-3px);
 }
 
-/* Panel Styling */
 .panel {
   display: flex;
   padding: 10px;
@@ -86,7 +80,6 @@ button:hover {
   backdrop-filter: blur(5px);
 }
 
-/* Top Panel Styling */
 .topPanel {
   z-index: 1;
   margin-left: 65px;
@@ -104,7 +97,6 @@ button:hover {
   background: linear-gradient(135deg, #80d0c7, #13547a);
 }
 
-/* Side Panel Styling */
 .sidePanel {
   z-index: 1;
   height: 250px;
@@ -136,7 +128,6 @@ p:hover {
   color: #357219;
 }
 
-/* Container Styling */
 .container {
   width: 100%;
   padding: 5rem;
@@ -153,7 +144,6 @@ p:hover {
   gap: 0.3rem;
 }
 
-/* Block Styling */
 .block {
   height: 3rem;
   width: 3rem;
@@ -169,15 +159,16 @@ p:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
-
+.block > p {
+  visibility: hidden;
+}
 .block:hover {
   background-color: rgba(57, 112, 31, 0.8);
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Checked Block Styling */
-.blockChecked {
+.block[data-checked="true"] {
   height: 3rem;
   width: 3rem;
   background-color: rgba(53, 114, 25, 0.6);
@@ -185,5 +176,19 @@ p:hover {
   border: 3px solid rgba(90, 124, 74, 0.6);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: 0.3s ease-in-out;
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+.blockChecked {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(53, 114, 25, 0.6);
+  border-radius: 8px;
+  border: 3px solid rgba(90, 124, 74, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease-in-out;
+  transform: scale(1.05);
 }

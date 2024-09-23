@@ -28,7 +28,7 @@ export function ContextWrapper(props) {
   const [column, setColumn] = useState(initialContext.column);
 
   function addRow() {
-    console.log(Array(row).fill("x"));
+    // console.log(Array(row).fill("x"));
     row < 1 ? row : setRow(row + 1);
   }
   function addColumn() {
